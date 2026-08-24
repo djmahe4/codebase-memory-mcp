@@ -2417,32 +2417,32 @@ static const TSStateId ts_primary_state_ids[STATE_COUNT] = {
   [781] = 781,
 };
 
-const TSCharacterRange sym_local_import_character_set_1[] = {
+static const TSCharacterRange sym_local_import_character_set_1[] = {
   {'!', '"'}, {'$', '\''}, {'*', '+'}, {'-', '.'}, {'0', ';'}, {'=', '='}, {'@', 'Z'}, {'^', 'z'},
   {'|', '|'}, {'~', '~'}, {0x80, 0x10ffff},
 };
 
-const TSCharacterRange sym_local_import_character_set_2[] = {
+static const TSCharacterRange sym_local_import_character_set_2[] = {
   {'!', '!'}, {'$', '\''}, {'*', '+'}, {'-', ';'}, {'=', '='}, {'@', 'Z'}, {'^', 'z'}, {'|', '|'},
   {'~', '~'}, {0x80, 0x10ffff},
 };
 
-const TSCharacterRange sym_http_raw_character_set_2[] = {
+static const TSCharacterRange sym_http_raw_character_set_2[] = {
   {'!', '!'}, {'$', '\''}, {'*', '+'}, {'-', ';'}, {'=', '='}, {'?', 'Z'}, {'_', '_'}, {'a', 'z'},
   {'~', '~'},
 };
 
-const TSCharacterRange sym_http_raw_character_set_3[] = {
+static const TSCharacterRange sym_http_raw_character_set_3[] = {
   {'!', '!'}, {'$', '\''}, {'*', '+'}, {'-', '.'}, {'0', ';'}, {'=', '='}, {'@', 'Z'}, {'_', '_'},
   {'a', 'z'}, {'~', '~'},
 };
 
-const TSCharacterRange sym_http_raw_character_set_4[] = {
+static const TSCharacterRange sym_http_raw_character_set_4[] = {
   {'!', '!'}, {'$', '$'}, {'&', '\''}, {'*', '+'}, {'-', '.'}, {'0', ';'}, {'=', '='}, {'A', 'Z'},
   {'_', '_'}, {'a', 'z'}, {'~', '~'},
 };
 
-const TSCharacterRange sym_http_raw_character_set_5[] = {
+static const TSCharacterRange sym_http_raw_character_set_5[] = {
   {'!', '!'}, {'$', '$'}, {'&', '\''}, {'*', '+'}, {'-', '.'}, {'0', ';'}, {'=', '='}, {'A', 'Z'},
   {']', ']'}, {'_', '_'}, {'a', 'z'}, {'~', '~'},
 };

@@ -62,6 +62,9 @@ Re-vendoring from upstream must re-apply these.
 | crystal    | `crystal/scanner.c`, serialize    | guard `memcpy(&buffer[offset], state->literals.contents, literal_content_size)` with `if (literal_content_size > 0)` | UBSan: zero-length `memcpy` with a NULL/0-size source on the empty-state serialize round-trip (formal UB, harmless) |
 | rescript   | `rescript/scanner.c`, deserialize | guard `memcpy(state, buffer, n_bytes)` with `if (n_bytes > 0)` | UBSan: zero-length `memcpy` with a NULL `buffer` / `n_bytes == 0` on empty-state deserialize (formal UB, harmless). The sibling serialize copies a fixed `sizeof(ScannerState)` (always > 0, non-NULL src) and needs no guard. |
 | purescript | `purescript/scanner.c`, serialize | guard `memcpy(buffer, indents->data, to_copy)` with `if (to_copy > 0)` | UBSan: zero-length `memcpy` with a NULL/0-size source when the indent vector is empty (formal UB, harmless) |
+| bp         | `bp/parser.c`                     | add `static` to `sym_identifier_character_set_1/2` tables | Linker: un-namespaced global character set array collides with other grammars |
+| dhall      | `dhall/parser.c`                  | add `static` to `sym_*_character_set_*` tables | Linker: un-namespaced global character set array collides with other grammars |
+| fsharp     | `fsharp/parser.c`                 | add `static` to `sym_*_character_set_*` tables | Linker: un-namespaced global character set array collides with other grammars |
 
 ## Vendored from verified upstream
 
