@@ -11,3 +11,8 @@ internal/cbm/vendored/grammars/**/scanner.c linguist-generated=true diff=false
 # the git hooks are extensionless and need explicit entries. (#1272)
 scripts/git-hooks/commit-msg   text eol=lf
 scripts/hooks/pre-commit       text eol=lf
+
+# Vendored files and checksum manifests must stay LF to match sha256 checksums across platforms
+vendored/**                    text eol=lf
+internal/cbm/vendored/**       text eol=lf
+scripts/vendored-checksums.txt text eol=lf
