@@ -52,9 +52,6 @@ static const ext_entry_t EXT_TABLE[] = {
     /* Dhall */
     {".dhall", CBM_LANG_DHALL},
 
-    /* Disassembly */
-    {".disasm", CBM_LANG_DISASSEMBLY},
-
     /* Faust */
     {".dsp", CBM_LANG_FAUST},
 
@@ -69,6 +66,10 @@ static const ext_entry_t EXT_TABLE[] = {
 
     /* Arduino */
     {".ino", CBM_LANG_ARDUINO},
+
+    /* Godot Resource */
+    {".tres", CBM_LANG_GODOT_RESOURCE},
+    {".tscn", CBM_LANG_GODOT_RESOURCE},
 
     /* Authzed */
     {".zed", CBM_LANG_AUTHZED},
@@ -380,14 +381,27 @@ static const ext_entry_t EXT_TABLE[] = {
     /* Starlark */
     {".bzl", CBM_LANG_STARLARK},
 
+    /* C3 */
+    {".c3", CBM_LANG_C3},
+    {".c3i", CBM_LANG_C3},
+
     /* Cairo */
     {".cairo", CBM_LANG_CAIRO},
 
     /* Cap'n Proto */
     {".capnp", CBM_LANG_CAPNP},
 
+    /* Cedar */
+    {".cedar", CBM_LANG_CEDAR},
+
+    /* Circom */
+    {".circom", CBM_LANG_CIRCOM},
+
     /* Apex */
     {".cls", CBM_LANG_APEX},
+
+    /* Cooklang */
+    {".cook", CBM_LANG_COOKLANG},
 
     /* Crystal */
     {".cr", CBM_LANG_CRYSTAL},
@@ -449,6 +463,9 @@ static const ext_entry_t EXT_TABLE[] = {
 
     /* HLSL */
     {".hlsli", CBM_LANG_HLSL},
+
+    /* Haxe */
+    {".hx", CBM_LANG_HAXE},
 
     /* ISPC */
     {".ispc", CBM_LANG_ISPC},
@@ -518,8 +535,9 @@ static const ext_entry_t EXT_TABLE[] = {
     {".ncl", CBM_LANG_NICKEL},
 
     /* Nim */
-
-    /* Nim */
+    {".nim", CBM_LANG_NIM},
+    {".nimble", CBM_LANG_NIM},
+    {".nims", CBM_LANG_NIM},
 
     /* Squirrel */
     {".nut", CBM_LANG_SQUIRREL},
@@ -542,6 +560,9 @@ static const ext_entry_t EXT_TABLE[] = {
     /* Pkl */
     {".pkl", CBM_LANG_PKL},
 
+    /* Promela */
+    {".pml", CBM_LANG_PROMELA},
+
     /* PO */
     {".po", CBM_LANG_PO},
 
@@ -556,6 +577,9 @@ static const ext_entry_t EXT_TABLE[] = {
 
     /* Prisma */
     {".prisma", CBM_LANG_PRISMA},
+
+    /* Promela */
+    {".promela", CBM_LANG_PROMELA},
 
     /* Properties */
     {".properties", CBM_LANG_PROPERTIES},
@@ -572,14 +596,15 @@ static const ext_entry_t EXT_TABLE[] = {
     /* PureScript */
     {".purs", CBM_LANG_PURESCRIPT},
 
+    /* Reason */
+    {".re", CBM_LANG_REASON},
+    {".rei", CBM_LANG_REASON},
+
     /* ReScript */
     {".res", CBM_LANG_RESCRIPT},
 
     /* ReScript */
     {".resi", CBM_LANG_RESCRIPT},
-
-    /* Regex */
-    {".re", CBM_LANG_REGEX},
 
     /* Racket */
     {".rkt", CBM_LANG_RACKET},
@@ -602,6 +627,9 @@ static const ext_entry_t EXT_TABLE[] = {
     /* Slang */
     {".slang", CBM_LANG_SLANG},
 
+    /* Slint */
+    {".slint", CBM_LANG_SLINT},
+
     /* Smali */
     {".smali", CBM_LANG_SMALI},
 
@@ -622,10 +650,6 @@ static const ext_entry_t EXT_TABLE[] = {
 
     /* Starlark */
     {".star", CBM_LANG_STARLARK},
-
-    /* SystemVerilog */
-
-    /* SystemVerilog */
 
     /* Sway */
     {".sw", CBM_LANG_SWAY},
@@ -657,11 +681,18 @@ static const ext_entry_t EXT_TABLE[] = {
     /* Typst */
     {".typ", CBM_LANG_TYPST},
 
+    /* Unison */
+    {".u", CBM_LANG_UNISON},
+
     /* VHDL */
     {".vhd", CBM_LANG_VHDL},
 
     /* VHDL */
     {".vhdl", CBM_LANG_VHDL},
+
+    /* Vala */
+    {".vala", CBM_LANG_VALA},
+    {".vapi", CBM_LANG_VALA},
 
     /* WGSL */
     {".wgsl", CBM_LANG_WGSL},
@@ -669,11 +700,26 @@ static const ext_entry_t EXT_TABLE[] = {
     /* WIT */
     {".wit", CBM_LANG_WIT},
 
-    /* Zsh */
-    {".zsh", CBM_LANG_ZSH},
+    /* Wren */
+    {".wren", CBM_LANG_WREN},
+
+    /* XQuery */
+    {".xq", CBM_LANG_XQUERY},
+    {".xql", CBM_LANG_XQUERY},
+    {".xqm", CBM_LANG_XQUERY},
+    {".xquery", CBM_LANG_XQUERY},
+
+    /* YANG */
+    {".yang", CBM_LANG_YANG},
+
+    /* Yul */
+    {".yul", CBM_LANG_YUL},
 
     /* Zig */
     {".zig", CBM_LANG_ZIG},
+
+    /* Zsh */
+    {".zsh", CBM_LANG_ZSH},
 };
 
 #define EXT_TABLE_SIZE (sizeof(EXT_TABLE) / sizeof(EXT_TABLE[0]))
@@ -806,7 +852,6 @@ static const char *LANG_NAMES[CBM_LANG_COUNT] = {
     [CBM_LANG_POWERSHELL] = "PowerShell",
     [CBM_LANG_PASCAL] = "Pascal",
     [CBM_LANG_DLANG] = "D",
-    [CBM_LANG_NIM] = "Nim",
     [CBM_LANG_SCHEME] = "Scheme",
     [CBM_LANG_FENNEL] = "Fennel",
     [CBM_LANG_FISH] = "Fish",
@@ -905,10 +950,25 @@ static const char *LANG_NAMES[CBM_LANG_COUNT] = {
     [CBM_LANG_CUE] = "CUE",
     [CBM_LANG_CYLC] = "Cylc",
     [CBM_LANG_DHALL] = "Dhall",
-    [CBM_LANG_DISASSEMBLY] = "Disassembly",
+    [CBM_LANG_GODOT_RESOURCE] = "Godot Resource",
     [CBM_LANG_FACILITY] = "Facility",
     [CBM_LANG_FAUST] = "Faust",
     [CBM_LANG_GHERKIN] = "Gherkin",
+    [CBM_LANG_C3] = "C3",
+    [CBM_LANG_CIRCOM] = "Circom",
+    [CBM_LANG_COOKLANG] = "Cooklang",
+    [CBM_LANG_HAXE] = "Haxe",
+    [CBM_LANG_NIM] = "Nim",
+    [CBM_LANG_PROMELA] = "Promela",
+    [CBM_LANG_REASON] = "Reason",
+    [CBM_LANG_SLINT] = "Slint",
+    [CBM_LANG_UNISON] = "Unison",
+    [CBM_LANG_VALA] = "Vala",
+    [CBM_LANG_WREN] = "Wren",
+    [CBM_LANG_XQUERY] = "XQuery",
+    [CBM_LANG_YANG] = "YANG",
+    [CBM_LANG_YUL] = "Yul",
+    [CBM_LANG_CEDAR] = "Cedar",
 };
 
 /* ── Public API ──────────────────────────────────────────────────── */

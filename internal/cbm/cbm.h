@@ -82,7 +82,6 @@ typedef enum {
     CBM_LANG_POWERSHELL,
     CBM_LANG_PASCAL,
     CBM_LANG_DLANG,
-    CBM_LANG_NIM,
     CBM_LANG_SCHEME,
     CBM_LANG_FENNEL,
     CBM_LANG_FISH,
@@ -184,10 +183,25 @@ typedef enum {
     CBM_LANG_CUE,                  // CUE configuration language (.cue)
     CBM_LANG_CYLC,                 // Cylc workflow engine suite config (.cylc)
     CBM_LANG_DHALL,                // Dhall configuration language (.dhall)
-    CBM_LANG_DISASSEMBLY,          // Disassembly listing (.disasm)
+    CBM_LANG_GODOT_RESOURCE,       // Godot Text Resource (.tscn, .tres)
     CBM_LANG_FACILITY,             // Facility Service Definition (.fsd)
     CBM_LANG_FAUST,                // Faust DSP audio language (.dsp)
     CBM_LANG_GHERKIN,              // Gherkin BDD specifications (.feature)
+    CBM_LANG_C3,                   // C3 (.c3, .c3i)
+    CBM_LANG_CIRCOM,               // Circom zero-knowledge circuit language (.circom)
+    CBM_LANG_COOKLANG,             // Cooklang recipe markup (.cook)
+    CBM_LANG_HAXE,                 // Haxe (.hx)
+    CBM_LANG_NIM,                  // Nim (.nim, .nims, .nimble)
+    CBM_LANG_PROMELA,              // Promela verification language (.pml, .promela)
+    CBM_LANG_REASON,               // ReasonML (.re, .rei)
+    CBM_LANG_SLINT,                // Slint UI markup (.slint)
+    CBM_LANG_UNISON,               // Unison (.u)
+    CBM_LANG_VALA,                 // Vala (.vala, .vapi)
+    CBM_LANG_WREN,                 // Wren (.wren)
+    CBM_LANG_XQUERY,               // XQuery (.xq, .xql, .xqm, .xquery)
+    CBM_LANG_YANG,                 // YANG data modeling language (.yang)
+    CBM_LANG_YUL,                  // Yul smart contract intermediate language (.yul)
+    CBM_LANG_CEDAR,                // Cedar policy language (.cedar)
     CBM_LANG_COUNT
 } CBMLanguage;
 

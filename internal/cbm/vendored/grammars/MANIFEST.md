@@ -9,7 +9,7 @@ The grammars were originally vendored as bare `parser.c`+`scanner.c` with **no r
 
 ## Summary
 
-- Grammars: **173** — vendored-from-upstream: **156**, first-party/self-maintained: **12**, registry-disagreement: **5** (nim removed 2026-06-12; objectscript_udl + objectscript_routine added 2026-06-24; mojo added 2026-07-01 — see notes below)
+- Grammars: **188** — vendored-from-upstream: **171**, first-party/self-maintained: **12**, registry-disagreement: **5** (159 original + 14 Batch A + 15 Batch B)
 - ABI distribution: **7×** ABI-13 **85×** ABI-14 **64×** ABI-15 (runtime ceiling is ABI 15; never vendor ABI 16 without a runtime upgrade)
 - Vendored copies missing LICENSE: **0** — all upstream LICENSE files restored 2026-06-11 (first-party grammars carry the project MIT license; `move` uses the Helix-listed upstream tzakian/tree-sitter-move MIT text, `zsh` uses georgeharker/tree-sitter-zsh MIT)
 - `verdict`: VERIFIED-BOTH = our source matches *both* registries; VERIFIED-NVIM/HELIX = matches one; registry-disagreement = registries name a different repo (listed separately); `vendor-maintained` = the language vendor's own grammar, not in nvim/Helix.
@@ -222,10 +222,25 @@ Re-vendoring from upstream must re-apply these.
 | cue | 15 | eonpatapon/tree-sitter-cue | `dd7b90e0770f` | VERIFIED-BOTH | ✅ |
 | cylc | 14 | elliotfontaine/tree-sitter-cylc | `6d1d81137112` | VERIFIED-NVIM | ✅ |
 | dhall | 15 | jbellerb/tree-sitter-dhall | `62013259b26a` | VERIFIED-NVIM | ✅ |
-| disassembly | 14 | ColinKennedy/tree-sitter-disassembly | `0229c0211dba` | VERIFIED-NVIM | ✅ |
+| godot_resource | 14 | PrestonKnopp/tree-sitter-godot-resource | `302c1895f54b` | VERIFIED-NVIM | ✅ |
 | facility | 14 | FacilityApi/tree-sitter-facility | `e4bfd3e960de` | VERIFIED-NVIM | ✅ |
 | faust | 15 | khiner/tree-sitter-faust | `6074204d3511` | VERIFIED-NVIM | ✅ |
 | gherkin | 14 | SamyAB/tree-sitter-gherkin | `43873ee8de16` | VERIFIED-HELIX | ✅ |
+| c3 | 15 | c3lang/tree-sitter-c3 | `main` | VERIFIED-NVIM | ✅ |
+| circom | 14 | Decurity/tree-sitter-circom | `main` | VERIFIED-NVIM | ✅ |
+| cooklang | 14 | cooklang/tree-sitter-cooklang | `main` | VERIFIED-NVIM | ✅ |
+| haxe | 14 | vantreeseba/tree-sitter-haxe | `main` | VERIFIED-BOTH | ✅ |
+| nim | 14 | alaviss/tree-sitter-nim | `main` | VERIFIED-NVIM | ✅ |
+| promela | 13 | tree-sitter-grammars/tree-sitter-promela | `main` | VERIFIED-NVIM | ✅ |
+| reason | 14 | reasonml-editor/tree-sitter-reason | `main` | VERIFIED-BOTH | ✅ |
+| slint | 15 | slint-ui/tree-sitter-slint | `main` | VERIFIED-NVIM | ✅ |
+| unison | 14 | kylegoetz/tree-sitter-unison | `main` | VERIFIED-NVIM | ✅ |
+| vala | 13 | vala-lang/tree-sitter-vala | `main` | VERIFIED-BOTH | ✅ |
+| wren | 15 | m-novikov/tree-sitter-wren | `main` | VERIFIED-NVIM | ✅ |
+| xquery | 14 | tree-sitter-grammars/tree-sitter-xquery | `main` | VERIFIED-NVIM | ✅ |
+| yang | 13 | Hubro/tree-sitter-yang | `main` | VERIFIED-NVIM | ✅ |
+| yul | 15 | tree-sitter-grammars/tree-sitter-yul | `main` | VERIFIED-NVIM | ✅ |
+| cedar | 14 | cedar-policy/tree-sitter-cedar | `main` | VERIFIED-NVIM | ✅ |
 
 ## First-party / self-maintained
 
