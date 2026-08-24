@@ -72,13 +72,10 @@ static bool ipc_test_parent_new(char out[TEST_PATH_CAP], const char *tag) {
     return th_secure_runtime_parent_new(out, TEST_PATH_CAP, tag);
 }
 
-static void ipc_test_copy_path(char out[TEST_PATH_CAP], const char *path) {
-    if (!path) {
-        out[0] = '\0';
-        return;
-    }
-    (void)snprintf(out, TEST_PATH_CAP, "%s", path);
-}
+#define ipc_test_copy_path(out, path) do { \
+    if (!(path)) { (out)[0] = '\0'; } \
+    else { (void)snprintf((out), sizeof(out), "%s", (path)); } \
+} while (0)
 
 static bool ipc_test_full_path(char out[TEST_PATH_CAP], const char *path) {
 #ifdef _WIN32

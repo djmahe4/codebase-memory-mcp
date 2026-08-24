@@ -1,0 +1,3 @@
+[scheduling]
+    [[graph]]
+        R1 = "foo => bar"

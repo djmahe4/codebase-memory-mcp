@@ -1044,6 +1044,77 @@ TEST(lang_ext_sosl) {
     PASS();
 }
 
+TEST(lang_ext_arduino) {
+    ASSERT_EQ(cbm_language_for_extension(".ino"), CBM_LANG_ARDUINO);
+    PASS();
+}
+
+TEST(lang_ext_authzed) {
+    ASSERT_EQ(cbm_language_for_extension(".zed"), CBM_LANG_AUTHZED);
+    PASS();
+}
+
+TEST(lang_ext_bp) {
+    ASSERT_EQ(cbm_language_for_extension(".bp"), CBM_LANG_BP);
+    PASS();
+}
+
+TEST(lang_ext_bpftrace) {
+    ASSERT_EQ(cbm_language_for_extension(".bt"), CBM_LANG_BPFTRACE);
+    PASS();
+}
+
+TEST(lang_ext_chatito) {
+    ASSERT_EQ(cbm_language_for_extension(".chatito"), CBM_LANG_CHATITO);
+    PASS();
+}
+
+TEST(lang_ext_corn) {
+    ASSERT_EQ(cbm_language_for_extension(".corn"), CBM_LANG_CORN);
+    PASS();
+}
+
+TEST(lang_ext_cpon) {
+    ASSERT_EQ(cbm_language_for_extension(".cpon"), CBM_LANG_CPON);
+    PASS();
+}
+
+TEST(lang_ext_cue) {
+    ASSERT_EQ(cbm_language_for_extension(".cue"), CBM_LANG_CUE);
+    PASS();
+}
+
+TEST(lang_ext_cylc) {
+    ASSERT_EQ(cbm_language_for_extension(".cylc"), CBM_LANG_CYLC);
+    PASS();
+}
+
+TEST(lang_ext_dhall) {
+    ASSERT_EQ(cbm_language_for_extension(".dhall"), CBM_LANG_DHALL);
+    PASS();
+}
+
+TEST(lang_ext_disassembly) {
+    ASSERT_EQ(cbm_language_for_extension(".disasm"), CBM_LANG_DISASSEMBLY);
+    PASS();
+}
+
+TEST(lang_ext_facility) {
+    ASSERT_EQ(cbm_language_for_extension(".facility"), CBM_LANG_FACILITY);
+    ASSERT_EQ(cbm_language_for_extension(".fsd"), CBM_LANG_FACILITY);
+    PASS();
+}
+
+TEST(lang_ext_faust) {
+    ASSERT_EQ(cbm_language_for_extension(".dsp"), CBM_LANG_FAUST);
+    PASS();
+}
+
+TEST(lang_ext_gherkin) {
+    ASSERT_EQ(cbm_language_for_extension(".feature"), CBM_LANG_GHERKIN);
+    PASS();
+}
+
 /* --- Ported from lang_test.go: TestForLanguage --- */
 TEST(lang_all_have_names) {
     /* Every language enum value from 0 to CBM_LANG_COUNT-1
@@ -1293,6 +1364,20 @@ SUITE(language) {
     RUN_TEST(lang_ext_apex);
     RUN_TEST(lang_ext_soql);
     RUN_TEST(lang_ext_sosl);
+    RUN_TEST(lang_ext_arduino);
+    RUN_TEST(lang_ext_authzed);
+    RUN_TEST(lang_ext_bp);
+    RUN_TEST(lang_ext_bpftrace);
+    RUN_TEST(lang_ext_chatito);
+    RUN_TEST(lang_ext_corn);
+    RUN_TEST(lang_ext_cpon);
+    RUN_TEST(lang_ext_cue);
+    RUN_TEST(lang_ext_cylc);
+    RUN_TEST(lang_ext_dhall);
+    RUN_TEST(lang_ext_disassembly);
+    RUN_TEST(lang_ext_facility);
+    RUN_TEST(lang_ext_faust);
+    RUN_TEST(lang_ext_gherkin);
 
     RUN_TEST(lang_all_have_names);
 }

@@ -174,6 +174,20 @@ typedef enum {
     CBM_LANG_OBJECTSCRIPT_UDL,     // InterSystems ObjectScript UDL (.cls class files)
     CBM_LANG_OBJECTSCRIPT_ROUTINE, // InterSystems ObjectScript routine (.mac/.int/.rtn/.inc)
     CBM_LANG_OBJECTSCRIPT_EXPORT,  // InterSystems Studio Export XML (<Export generator="Cache">)
+    CBM_LANG_ARDUINO,              // Arduino C++ (.ino)
+    CBM_LANG_AUTHZED,              // Authzed SpiceDB schema (.zed)
+    CBM_LANG_BP,                   // Android Blueprint (.bp)
+    CBM_LANG_BPFTRACE,             // eBPF tracing script (.bt)
+    CBM_LANG_CHATITO,              // Chatito NLP dataset DSL (.chatito)
+    CBM_LANG_CORN,                 // Corn configuration language (.corn)
+    CBM_LANG_CPON,                 // CPON data format (.cpon)
+    CBM_LANG_CUE,                  // CUE configuration language (.cue)
+    CBM_LANG_CYLC,                 // Cylc workflow engine suite config (.cylc)
+    CBM_LANG_DHALL,                // Dhall configuration language (.dhall)
+    CBM_LANG_DISASSEMBLY,          // Disassembly listing (.disasm)
+    CBM_LANG_FACILITY,             // Facility Service Definition (.fsd)
+    CBM_LANG_FAUST,                // Faust DSP audio language (.dsp)
+    CBM_LANG_GHERKIN,              // Gherkin BDD specifications (.feature)
     CBM_LANG_COUNT
 } CBMLanguage;
 

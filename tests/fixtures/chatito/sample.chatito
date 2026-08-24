@@ -1,0 +1,2 @@
+%[greet]('training': '10')
+    ~[hi] @[name]
