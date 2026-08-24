@@ -1,0 +1,10 @@
+service MyService
+{
+    method doWork
+    {
+        request:
+        {
+            id: string;
+        };
+    };
+}

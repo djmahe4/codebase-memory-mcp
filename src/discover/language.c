@@ -28,6 +28,51 @@ typedef struct {
 
 /* Sorted by extension for binary search (but linear scan is fine for ~120 entries) */
 static const ext_entry_t EXT_TABLE[] = {
+    /* Android Blueprint */
+    {".bp", CBM_LANG_BP},
+
+    /* BPFtrace */
+    {".bt", CBM_LANG_BPFTRACE},
+
+    /* Chatito */
+    {".chatito", CBM_LANG_CHATITO},
+
+    /* Corn */
+    {".corn", CBM_LANG_CORN},
+
+    /* CPON */
+    {".cpon", CBM_LANG_CPON},
+
+    /* CUE */
+    {".cue", CBM_LANG_CUE},
+
+    /* Cylc */
+    {".cylc", CBM_LANG_CYLC},
+
+    /* Dhall */
+    {".dhall", CBM_LANG_DHALL},
+
+    /* Disassembly */
+    {".disasm", CBM_LANG_DISASSEMBLY},
+
+    /* Faust */
+    {".dsp", CBM_LANG_FAUST},
+
+    /* Facility */
+    {".facility", CBM_LANG_FACILITY},
+
+    /* Gherkin */
+    {".feature", CBM_LANG_GHERKIN},
+
+    /* Facility */
+    {".fsd", CBM_LANG_FACILITY},
+
+    /* Arduino */
+    {".ino", CBM_LANG_ARDUINO},
+
+    /* Authzed */
+    {".zed", CBM_LANG_AUTHZED},
+
     /* Bash */
     {".bash", CBM_LANG_BASH},
     {".sh", CBM_LANG_BASH},
@@ -850,7 +895,20 @@ static const char *LANG_NAMES[CBM_LANG_COUNT] = {
     [CBM_LANG_OBJECTSCRIPT_UDL] = "ObjectScript UDL",
     [CBM_LANG_OBJECTSCRIPT_ROUTINE] = "ObjectScript Routine",
     [CBM_LANG_OBJECTSCRIPT_EXPORT] = "ObjectScript Export XML",
-
+    [CBM_LANG_ARDUINO] = "Arduino",
+    [CBM_LANG_AUTHZED] = "Authzed",
+    [CBM_LANG_BP] = "Blueprint",
+    [CBM_LANG_BPFTRACE] = "BPFtrace",
+    [CBM_LANG_CHATITO] = "Chatito",
+    [CBM_LANG_CORN] = "Corn",
+    [CBM_LANG_CPON] = "CPON",
+    [CBM_LANG_CUE] = "CUE",
+    [CBM_LANG_CYLC] = "Cylc",
+    [CBM_LANG_DHALL] = "Dhall",
+    [CBM_LANG_DISASSEMBLY] = "Disassembly",
+    [CBM_LANG_FACILITY] = "Facility",
+    [CBM_LANG_FAUST] = "Faust",
+    [CBM_LANG_GHERKIN] = "Gherkin",
 };
 
 /* ── Public API ──────────────────────────────────────────────────── */

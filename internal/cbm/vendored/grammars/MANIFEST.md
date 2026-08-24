@@ -9,7 +9,7 @@ The grammars were originally vendored as bare `parser.c`+`scanner.c` with **no r
 
 ## Summary
 
-- Grammars: **159** — vendored-from-upstream: **142**, first-party/self-maintained: **12**, registry-disagreement: **5** (nim removed 2026-06-12; objectscript_udl + objectscript_routine added 2026-06-24; mojo added 2026-07-01 — see notes below)
+- Grammars: **173** — vendored-from-upstream: **156**, first-party/self-maintained: **12**, registry-disagreement: **5** (nim removed 2026-06-12; objectscript_udl + objectscript_routine added 2026-06-24; mojo added 2026-07-01 — see notes below)
 - ABI distribution: **7×** ABI-13 **85×** ABI-14 **64×** ABI-15 (runtime ceiling is ABI 15; never vendor ABI 16 without a runtime upgrade)
 - Vendored copies missing LICENSE: **0** — all upstream LICENSE files restored 2026-06-11 (first-party grammars carry the project MIT license; `move` uses the Helix-listed upstream tzakian/tree-sitter-move MIT text, `zsh` uses georgeharker/tree-sitter-zsh MIT)
 - `verdict`: VERIFIED-BOTH = our source matches *both* registries; VERIFIED-NVIM/HELIX = matches one; registry-disagreement = registries name a different repo (listed separately); `vendor-maintained` = the language vendor's own grammar, not in nvim/Helix.
@@ -209,6 +209,20 @@ Re-vendoring from upstream must re-apply these.
 | xml | 14 | tree-sitter-grammars/tree-sitter-xml | `5000ae8f22d1` | VERIFIED-NVIM | ✅ |
 | yaml | 14 | tree-sitter-grammars/tree-sitter-yaml | `4463985dfccc` | VERIFIED-NVIM | ✅ |
 | zig | 14 | tree-sitter-grammars/tree-sitter-zig | `6479aa13f32f` | VERIFIED-BOTH | ✅ |
+| arduino | 15 | tree-sitter-grammars/tree-sitter-arduino | `11dd46c9ae25` | VERIFIED-NVIM | ✅ |
+| authzed | 15 | mleonidas/tree-sitter-authzed | `83e5c26a8687` | VERIFIED-NVIM | ✅ |
+| bp | 15 | ambroisie/tree-sitter-bp | `ee641d153901` | VERIFIED-NVIM | ✅ |
+| bpftrace | 15 | sgruszka/tree-sitter-bpftrace | `ce507ff578ef` | VERIFIED-NVIM | ✅ |
+| chatito | 15 | tree-sitter-grammars/tree-sitter-chatito | `c0ed82c665b7` | VERIFIED-NVIM | ✅ |
+| corn | 14 | jakestanger/tree-sitter-corn | `464654742cbf` | VERIFIED-NVIM | ✅ |
+| cpon | 14 | tree-sitter-grammars/tree-sitter-cpon | `594289eadfec` | VERIFIED-NVIM | ✅ |
+| cue | 15 | eonpatapon/tree-sitter-cue | `dd7b90e0770f` | VERIFIED-BOTH | ✅ |
+| cylc | 14 | elliotfontaine/tree-sitter-cylc | `6d1d81137112` | VERIFIED-NVIM | ✅ |
+| dhall | 15 | jbellerb/tree-sitter-dhall | `62013259b26a` | VERIFIED-NVIM | ✅ |
+| disassembly | 14 | ColinKennedy/tree-sitter-disassembly | `0229c0211dba` | VERIFIED-NVIM | ✅ |
+| facility | 14 | FacilityApi/tree-sitter-facility | `e4bfd3e960de` | VERIFIED-NVIM | ✅ |
+| faust | 15 | khiner/tree-sitter-faust | `6074204d3511` | VERIFIED-NVIM | ✅ |
+| gherkin | 14 | SamyAB/tree-sitter-gherkin | `43873ee8de16` | VERIFIED-HELIX | ✅ |
 
 ## First-party / self-maintained
 
