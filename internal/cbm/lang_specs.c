@@ -168,6 +168,39 @@ extern const TSLanguage *tree_sitter_mojo(void);
 extern const TSLanguage *tree_sitter_objectscript_udl(void);
 extern const TSLanguage *tree_sitter_objectscript_routine(void);
 
+// Batch A (14 structural / general languages)
+extern const TSLanguage *tree_sitter_arduino(void);
+extern const TSLanguage *tree_sitter_authzed(void);
+extern const TSLanguage *tree_sitter_bp(void);
+extern const TSLanguage *tree_sitter_bpftrace(void);
+extern const TSLanguage *tree_sitter_chatito(void);
+extern const TSLanguage *tree_sitter_corn(void);
+extern const TSLanguage *tree_sitter_cpon(void);
+extern const TSLanguage *tree_sitter_cue(void);
+extern const TSLanguage *tree_sitter_cylc(void);
+extern const TSLanguage *tree_sitter_dhall(void);
+extern const TSLanguage *tree_sitter_godot_resource(void);
+extern const TSLanguage *tree_sitter_facility(void);
+extern const TSLanguage *tree_sitter_faust(void);
+extern const TSLanguage *tree_sitter_gherkin(void);
+
+// Batch B (15 languages)
+extern const TSLanguage *tree_sitter_c3(void);
+extern const TSLanguage *tree_sitter_circom(void);
+extern const TSLanguage *tree_sitter_cooklang(void);
+extern const TSLanguage *tree_sitter_haxe(void);
+extern const TSLanguage *tree_sitter_nim(void);
+extern const TSLanguage *tree_sitter_promela(void);
+extern const TSLanguage *tree_sitter_reason(void);
+extern const TSLanguage *tree_sitter_slint(void);
+extern const TSLanguage *tree_sitter_unison(void);
+extern const TSLanguage *tree_sitter_vala(void);
+extern const TSLanguage *tree_sitter_wren(void);
+extern const TSLanguage *tree_sitter_xquery(void);
+extern const TSLanguage *tree_sitter_yang(void);
+extern const TSLanguage *tree_sitter_yul(void);
+extern const TSLanguage *tree_sitter_cedar(void);
+
 // -- Empty sentinel --
 static const char *empty_types[] = {NULL};
 
@@ -2639,6 +2672,180 @@ static const CBMLangSpec lang_specs[CBM_LANG_COUNT] = {
     // pipeline transcodes Export XML to UDL (iris_export_xml.c) and re-extracts
     // each class as CBM_LANG_OBJECTSCRIPT_UDL, so this language never reaches
     // cbm_lang_spec()/cbm_ts_language() directly. Left as a zero spec.
+
+    // CBM_LANG_ARDUINO (Arduino C++)
+    [CBM_LANG_ARDUINO] = {CBM_LANG_ARDUINO, cpp_func_types, cpp_class_types, cpp_field_types,
+                          cpp_module_types, cpp_call_types, cpp_import_types, cpp_import_types,
+                          cpp_branch_types, cpp_var_types, cpp_assign_types, cpp_throw_types,
+                          NULL, empty_types, NULL, NULL, tree_sitter_arduino, NULL},
+
+    // CBM_LANG_AUTHZED (SpiceDB Schema)
+    [CBM_LANG_AUTHZED] = {CBM_LANG_AUTHZED, empty_types, empty_types, empty_types,
+                          empty_types, empty_types, empty_types, empty_types,
+                          empty_types, empty_types, empty_types, empty_types,
+                          NULL, empty_types, NULL, NULL, tree_sitter_authzed, NULL},
+
+    // CBM_LANG_BP (Android Blueprint)
+    [CBM_LANG_BP] = {CBM_LANG_BP, empty_types, empty_types, empty_types,
+                     empty_types, empty_types, empty_types, empty_types,
+                     empty_types, empty_types, empty_types, empty_types,
+                     NULL, empty_types, NULL, NULL, tree_sitter_bp, NULL},
+
+    // CBM_LANG_BPFTRACE (eBPF tracing)
+    [CBM_LANG_BPFTRACE] = {CBM_LANG_BPFTRACE, empty_types, empty_types, empty_types,
+                           empty_types, empty_types, empty_types, empty_types,
+                           empty_types, empty_types, empty_types, empty_types,
+                           NULL, empty_types, NULL, NULL, tree_sitter_bpftrace, NULL},
+
+    // CBM_LANG_CHATITO (NLP dataset DSL)
+    [CBM_LANG_CHATITO] = {CBM_LANG_CHATITO, empty_types, empty_types, empty_types,
+                          empty_types, empty_types, empty_types, empty_types,
+                          empty_types, empty_types, empty_types, empty_types,
+                          NULL, empty_types, NULL, NULL, tree_sitter_chatito, NULL},
+
+    // CBM_LANG_CORN (Corn config language)
+    [CBM_LANG_CORN] = {CBM_LANG_CORN, empty_types, empty_types, empty_types,
+                       empty_types, empty_types, empty_types, empty_types,
+                       empty_types, empty_types, empty_types, empty_types,
+                       NULL, empty_types, NULL, NULL, tree_sitter_corn, NULL},
+
+    // CBM_LANG_CPON (CPON format)
+    [CBM_LANG_CPON] = {CBM_LANG_CPON, empty_types, empty_types, empty_types,
+                       empty_types, empty_types, empty_types, empty_types,
+                       empty_types, empty_types, empty_types, empty_types,
+                       NULL, empty_types, NULL, NULL, tree_sitter_cpon, NULL},
+
+    // CBM_LANG_CUE (CUE config language)
+    [CBM_LANG_CUE] = {CBM_LANG_CUE, empty_types, empty_types, empty_types,
+                      empty_types, empty_types, empty_types, empty_types,
+                      empty_types, empty_types, empty_types, empty_types,
+                      NULL, empty_types, NULL, NULL, tree_sitter_cue, NULL},
+
+    // CBM_LANG_CYLC (Cylc workflow suite config)
+    [CBM_LANG_CYLC] = {CBM_LANG_CYLC, empty_types, empty_types, empty_types,
+                       empty_types, empty_types, empty_types, empty_types,
+                       empty_types, empty_types, empty_types, empty_types,
+                       NULL, empty_types, NULL, NULL, tree_sitter_cylc, NULL},
+
+    // CBM_LANG_DHALL (Dhall config language)
+    [CBM_LANG_DHALL] = {CBM_LANG_DHALL, empty_types, empty_types, empty_types,
+                        empty_types, empty_types, empty_types, empty_types,
+                        empty_types, empty_types, empty_types, empty_types,
+                        NULL, empty_types, NULL, NULL, tree_sitter_dhall, NULL},
+
+    // CBM_LANG_GODOT_RESOURCE (Godot Text Resource)
+    [CBM_LANG_GODOT_RESOURCE] = {CBM_LANG_GODOT_RESOURCE, empty_types, empty_types, empty_types,
+                                 empty_types, empty_types, empty_types, empty_types,
+                                 empty_types, empty_types, empty_types, empty_types,
+                                 NULL, empty_types, NULL, NULL, tree_sitter_godot_resource, NULL},
+
+    // CBM_LANG_FACILITY (Facility Service Definition)
+    [CBM_LANG_FACILITY] = {CBM_LANG_FACILITY, empty_types, empty_types, empty_types,
+                           empty_types, empty_types, empty_types, empty_types,
+                           empty_types, empty_types, empty_types, empty_types,
+                           NULL, empty_types, NULL, NULL, tree_sitter_facility, NULL},
+
+    // CBM_LANG_FAUST (Faust audio DSP)
+    [CBM_LANG_FAUST] = {CBM_LANG_FAUST, empty_types, empty_types, empty_types,
+                        empty_types, empty_types, empty_types, empty_types,
+                        empty_types, empty_types, empty_types, empty_types,
+                        NULL, empty_types, NULL, NULL, tree_sitter_faust, NULL},
+
+    // CBM_LANG_GHERKIN (Gherkin BDD)
+    [CBM_LANG_GHERKIN] = {CBM_LANG_GHERKIN, empty_types, empty_types, empty_types,
+                          empty_types, empty_types, empty_types, empty_types,
+                          empty_types, empty_types, empty_types, empty_types,
+                          NULL, empty_types, NULL, NULL, tree_sitter_gherkin, NULL},
+
+    // CBM_LANG_C3 (C3)
+    [CBM_LANG_C3] = {CBM_LANG_C3, empty_types, empty_types, empty_types,
+                     empty_types, empty_types, empty_types, empty_types,
+                     empty_types, empty_types, empty_types, empty_types,
+                     NULL, empty_types, NULL, NULL, tree_sitter_c3, NULL},
+
+    // CBM_LANG_CIRCOM (Circom)
+    [CBM_LANG_CIRCOM] = {CBM_LANG_CIRCOM, empty_types, empty_types, empty_types,
+                         empty_types, empty_types, empty_types, empty_types,
+                         empty_types, empty_types, empty_types, empty_types,
+                         NULL, empty_types, NULL, NULL, tree_sitter_circom, NULL},
+
+    // CBM_LANG_COOKLANG (Cooklang)
+    [CBM_LANG_COOKLANG] = {CBM_LANG_COOKLANG, empty_types, empty_types, empty_types,
+                           empty_types, empty_types, empty_types, empty_types,
+                           empty_types, empty_types, empty_types, empty_types,
+                           NULL, empty_types, NULL, NULL, tree_sitter_cooklang, NULL},
+
+    // CBM_LANG_HAXE (Haxe)
+    [CBM_LANG_HAXE] = {CBM_LANG_HAXE, empty_types, empty_types, empty_types,
+                       empty_types, empty_types, empty_types, empty_types,
+                       empty_types, empty_types, empty_types, empty_types,
+                       NULL, empty_types, NULL, NULL, tree_sitter_haxe, NULL},
+
+    // CBM_LANG_NIM (Nim)
+    [CBM_LANG_NIM] = {CBM_LANG_NIM, empty_types, empty_types, empty_types,
+                      empty_types, empty_types, empty_types, empty_types,
+                      empty_types, empty_types, empty_types, empty_types,
+                      NULL, empty_types, NULL, NULL, tree_sitter_nim, NULL},
+
+    // CBM_LANG_PROMELA (Promela)
+    [CBM_LANG_PROMELA] = {CBM_LANG_PROMELA, empty_types, empty_types, empty_types,
+                          empty_types, empty_types, empty_types, empty_types,
+                          empty_types, empty_types, empty_types, empty_types,
+                          NULL, empty_types, NULL, NULL, tree_sitter_promela, NULL},
+
+    // CBM_LANG_REASON (ReasonML)
+    [CBM_LANG_REASON] = {CBM_LANG_REASON, empty_types, empty_types, empty_types,
+                         empty_types, empty_types, empty_types, empty_types,
+                         empty_types, empty_types, empty_types, empty_types,
+                         NULL, empty_types, NULL, NULL, tree_sitter_reason, NULL},
+
+    // CBM_LANG_SLINT (Slint)
+    [CBM_LANG_SLINT] = {CBM_LANG_SLINT, empty_types, empty_types, empty_types,
+                        empty_types, empty_types, empty_types, empty_types,
+                        empty_types, empty_types, empty_types, empty_types,
+                        NULL, empty_types, NULL, NULL, tree_sitter_slint, NULL},
+
+    // CBM_LANG_UNISON (Unison)
+    [CBM_LANG_UNISON] = {CBM_LANG_UNISON, empty_types, empty_types, empty_types,
+                         empty_types, empty_types, empty_types, empty_types,
+                         empty_types, empty_types, empty_types, empty_types,
+                         NULL, empty_types, NULL, NULL, tree_sitter_unison, NULL},
+
+    // CBM_LANG_VALA (Vala)
+    [CBM_LANG_VALA] = {CBM_LANG_VALA, empty_types, empty_types, empty_types,
+                       empty_types, empty_types, empty_types, empty_types,
+                       empty_types, empty_types, empty_types, empty_types,
+                       NULL, empty_types, NULL, NULL, tree_sitter_vala, NULL},
+
+    // CBM_LANG_WREN (Wren)
+    [CBM_LANG_WREN] = {CBM_LANG_WREN, empty_types, empty_types, empty_types,
+                       empty_types, empty_types, empty_types, empty_types,
+                       empty_types, empty_types, empty_types, empty_types,
+                       NULL, empty_types, NULL, NULL, tree_sitter_wren, NULL},
+
+    // CBM_LANG_XQUERY (XQuery)
+    [CBM_LANG_XQUERY] = {CBM_LANG_XQUERY, empty_types, empty_types, empty_types,
+                         empty_types, empty_types, empty_types, empty_types,
+                         empty_types, empty_types, empty_types, empty_types,
+                         NULL, empty_types, NULL, NULL, tree_sitter_xquery, NULL},
+
+    // CBM_LANG_YANG (YANG)
+    [CBM_LANG_YANG] = {CBM_LANG_YANG, empty_types, empty_types, empty_types,
+                       empty_types, empty_types, empty_types, empty_types,
+                       empty_types, empty_types, empty_types, empty_types,
+                       NULL, empty_types, NULL, NULL, tree_sitter_yang, NULL},
+
+    // CBM_LANG_YUL (Yul)
+    [CBM_LANG_YUL] = {CBM_LANG_YUL, empty_types, empty_types, empty_types,
+                      empty_types, empty_types, empty_types, empty_types,
+                      empty_types, empty_types, empty_types, empty_types,
+                      NULL, empty_types, NULL, NULL, tree_sitter_yul, NULL},
+
+    // CBM_LANG_CEDAR (Cedar)
+    [CBM_LANG_CEDAR] = {CBM_LANG_CEDAR, empty_types, empty_types, empty_types,
+                        empty_types, empty_types, empty_types, empty_types,
+                        empty_types, empty_types, empty_types, empty_types,
+                        NULL, empty_types, NULL, NULL, tree_sitter_cedar, NULL},
 
 };
 

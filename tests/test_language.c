@@ -650,9 +650,9 @@ TEST(lang_ext_d) {
 }
 
 TEST(lang_ext_nim) {
-    /* nim grammar removed — .nim/.nims no longer map to a language */
-    ASSERT_EQ(cbm_language_for_extension(".nim"), CBM_LANG_COUNT);
-    ASSERT_EQ(cbm_language_for_extension(".nims"), CBM_LANG_COUNT);
+    ASSERT_EQ(cbm_language_for_extension(".nim"), CBM_LANG_NIM);
+    ASSERT_EQ(cbm_language_for_extension(".nims"), CBM_LANG_NIM);
+    ASSERT_EQ(cbm_language_for_extension(".nimble"), CBM_LANG_NIM);
     PASS();
 }
 
@@ -1044,6 +1044,155 @@ TEST(lang_ext_sosl) {
     PASS();
 }
 
+TEST(lang_ext_arduino) {
+    ASSERT_EQ(cbm_language_for_extension(".ino"), CBM_LANG_ARDUINO);
+    PASS();
+}
+
+TEST(lang_ext_authzed) {
+    ASSERT_EQ(cbm_language_for_extension(".zed"), CBM_LANG_AUTHZED);
+    PASS();
+}
+
+TEST(lang_ext_bp) {
+    ASSERT_EQ(cbm_language_for_extension(".bp"), CBM_LANG_BP);
+    PASS();
+}
+
+TEST(lang_ext_bpftrace) {
+    ASSERT_EQ(cbm_language_for_extension(".bt"), CBM_LANG_BPFTRACE);
+    PASS();
+}
+
+TEST(lang_ext_chatito) {
+    ASSERT_EQ(cbm_language_for_extension(".chatito"), CBM_LANG_CHATITO);
+    PASS();
+}
+
+TEST(lang_ext_corn) {
+    ASSERT_EQ(cbm_language_for_extension(".corn"), CBM_LANG_CORN);
+    PASS();
+}
+
+TEST(lang_ext_cpon) {
+    ASSERT_EQ(cbm_language_for_extension(".cpon"), CBM_LANG_CPON);
+    PASS();
+}
+
+TEST(lang_ext_cue) {
+    ASSERT_EQ(cbm_language_for_extension(".cue"), CBM_LANG_CUE);
+    PASS();
+}
+
+TEST(lang_ext_cylc) {
+    ASSERT_EQ(cbm_language_for_extension(".cylc"), CBM_LANG_CYLC);
+    PASS();
+}
+
+TEST(lang_ext_dhall) {
+    ASSERT_EQ(cbm_language_for_extension(".dhall"), CBM_LANG_DHALL);
+    PASS();
+}
+
+TEST(lang_ext_godot_resource) {
+    ASSERT_EQ(cbm_language_for_extension(".tscn"), CBM_LANG_GODOT_RESOURCE);
+    ASSERT_EQ(cbm_language_for_extension(".tres"), CBM_LANG_GODOT_RESOURCE);
+    PASS();
+}
+
+TEST(lang_ext_facility) {
+    ASSERT_EQ(cbm_language_for_extension(".facility"), CBM_LANG_FACILITY);
+    ASSERT_EQ(cbm_language_for_extension(".fsd"), CBM_LANG_FACILITY);
+    PASS();
+}
+
+TEST(lang_ext_faust) {
+    ASSERT_EQ(cbm_language_for_extension(".dsp"), CBM_LANG_FAUST);
+    PASS();
+}
+
+TEST(lang_ext_gherkin) {
+    ASSERT_EQ(cbm_language_for_extension(".feature"), CBM_LANG_GHERKIN);
+    PASS();
+}
+
+TEST(lang_ext_c3) {
+    ASSERT_EQ(cbm_language_for_extension(".c3"), CBM_LANG_C3);
+    ASSERT_EQ(cbm_language_for_extension(".c3i"), CBM_LANG_C3);
+    PASS();
+}
+
+TEST(lang_ext_circom) {
+    ASSERT_EQ(cbm_language_for_extension(".circom"), CBM_LANG_CIRCOM);
+    PASS();
+}
+
+TEST(lang_ext_cooklang) {
+    ASSERT_EQ(cbm_language_for_extension(".cook"), CBM_LANG_COOKLANG);
+    PASS();
+}
+
+TEST(lang_ext_haxe) {
+    ASSERT_EQ(cbm_language_for_extension(".hx"), CBM_LANG_HAXE);
+    PASS();
+}
+
+TEST(lang_ext_promela) {
+    ASSERT_EQ(cbm_language_for_extension(".pml"), CBM_LANG_PROMELA);
+    ASSERT_EQ(cbm_language_for_extension(".promela"), CBM_LANG_PROMELA);
+    PASS();
+}
+
+TEST(lang_ext_reason) {
+    ASSERT_EQ(cbm_language_for_extension(".re"), CBM_LANG_REASON);
+    ASSERT_EQ(cbm_language_for_extension(".rei"), CBM_LANG_REASON);
+    PASS();
+}
+
+TEST(lang_ext_slint) {
+    ASSERT_EQ(cbm_language_for_extension(".slint"), CBM_LANG_SLINT);
+    PASS();
+}
+
+TEST(lang_ext_unison) {
+    ASSERT_EQ(cbm_language_for_extension(".u"), CBM_LANG_UNISON);
+    PASS();
+}
+
+TEST(lang_ext_vala) {
+    ASSERT_EQ(cbm_language_for_extension(".vala"), CBM_LANG_VALA);
+    ASSERT_EQ(cbm_language_for_extension(".vapi"), CBM_LANG_VALA);
+    PASS();
+}
+
+TEST(lang_ext_wren) {
+    ASSERT_EQ(cbm_language_for_extension(".wren"), CBM_LANG_WREN);
+    PASS();
+}
+
+TEST(lang_ext_xquery) {
+    ASSERT_EQ(cbm_language_for_extension(".xq"), CBM_LANG_XQUERY);
+    ASSERT_EQ(cbm_language_for_extension(".xql"), CBM_LANG_XQUERY);
+    ASSERT_EQ(cbm_language_for_extension(".xqm"), CBM_LANG_XQUERY);
+    ASSERT_EQ(cbm_language_for_extension(".xquery"), CBM_LANG_XQUERY);
+    PASS();
+}
+
+TEST(lang_ext_yang) {
+    ASSERT_EQ(cbm_language_for_extension(".yang"), CBM_LANG_YANG);
+    PASS();
+}
+
+TEST(lang_ext_yul) {
+    ASSERT_EQ(cbm_language_for_extension(".yul"), CBM_LANG_YUL);
+    PASS();
+}
+
+TEST(lang_ext_cedar) {
+    ASSERT_EQ(cbm_language_for_extension(".cedar"), CBM_LANG_CEDAR);
+    PASS();
+}
+
 /* --- Ported from lang_test.go: TestForLanguage --- */
 TEST(lang_all_have_names) {
     /* Every language enum value from 0 to CBM_LANG_COUNT-1
@@ -1293,6 +1442,34 @@ SUITE(language) {
     RUN_TEST(lang_ext_apex);
     RUN_TEST(lang_ext_soql);
     RUN_TEST(lang_ext_sosl);
+    RUN_TEST(lang_ext_arduino);
+    RUN_TEST(lang_ext_authzed);
+    RUN_TEST(lang_ext_bp);
+    RUN_TEST(lang_ext_bpftrace);
+    RUN_TEST(lang_ext_chatito);
+    RUN_TEST(lang_ext_corn);
+    RUN_TEST(lang_ext_cpon);
+    RUN_TEST(lang_ext_cue);
+    RUN_TEST(lang_ext_cylc);
+    RUN_TEST(lang_ext_dhall);
+    RUN_TEST(lang_ext_godot_resource);
+    RUN_TEST(lang_ext_facility);
+    RUN_TEST(lang_ext_faust);
+    RUN_TEST(lang_ext_gherkin);
+    RUN_TEST(lang_ext_c3);
+    RUN_TEST(lang_ext_circom);
+    RUN_TEST(lang_ext_cooklang);
+    RUN_TEST(lang_ext_haxe);
+    RUN_TEST(lang_ext_promela);
+    RUN_TEST(lang_ext_reason);
+    RUN_TEST(lang_ext_slint);
+    RUN_TEST(lang_ext_unison);
+    RUN_TEST(lang_ext_vala);
+    RUN_TEST(lang_ext_wren);
+    RUN_TEST(lang_ext_xquery);
+    RUN_TEST(lang_ext_yang);
+    RUN_TEST(lang_ext_yul);
+    RUN_TEST(lang_ext_cedar);
 
     RUN_TEST(lang_all_have_names);
 }

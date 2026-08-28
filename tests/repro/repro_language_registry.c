@@ -118,7 +118,6 @@ static const LanguageCapabilityEntry LANGUAGE_CAPABILITIES[CBM_LANG_COUNT] = {
     CALL_WITHOUT_REFERENCE_VOCAB(POWERSHELL),
     CALL_WITH_REFERENCE_VOCAB(PASCAL),
     CALL_WITH_REFERENCE_VOCAB(DLANG),
-    UNSUPPORTED(NIM),
     CALL_WITHOUT_REFERENCE_VOCAB(SCHEME),
     CALL_WITHOUT_REFERENCE_VOCAB(FENNEL),
     CALL_WITHOUT_REFERENCE_VOCAB(FISH),
@@ -210,6 +209,35 @@ static const LanguageCapabilityEntry LANGUAGE_CAPABILITIES[CBM_LANG_COUNT] = {
     CALL_WITH_REFERENCE_VOCAB(OBJECTSCRIPT_UDL),
     CALL_WITH_REFERENCE_VOCAB(OBJECTSCRIPT_ROUTINE),
     TRANSFORM_ONLY(OBJECTSCRIPT_EXPORT),
+    CALL_WITH_REFERENCE_VOCAB(ARDUINO),
+    NO_CALL(AUTHZED),
+    NO_CALL(BP),
+    NO_CALL(BPFTRACE),
+    NO_CALL(CHATITO),
+    NO_CALL(CORN),
+    NO_CALL(CPON),
+    NO_CALL(CUE),
+    NO_CALL(CYLC),
+    NO_CALL(DHALL),
+    NO_CALL(GODOT_RESOURCE),
+    NO_CALL(FACILITY),
+    NO_CALL(FAUST),
+    NO_CALL(GHERKIN),
+    NO_CALL(C3),
+    NO_CALL(CIRCOM),
+    NO_CALL(COOKLANG),
+    NO_CALL(HAXE),
+    NO_CALL(NIM),
+    NO_CALL(PROMELA),
+    NO_CALL(REASON),
+    NO_CALL(SLINT),
+    NO_CALL(UNISON),
+    NO_CALL(VALA),
+    NO_CALL(WREN),
+    NO_CALL(XQUERY),
+    NO_CALL(YANG),
+    NO_CALL(YUL),
+    NO_CALL(CEDAR),
 };
 
 #undef CALL_WITH_REFERENCE_VOCAB
@@ -298,8 +326,8 @@ TEST(repro_language_capability_ledger_covers_every_enum) {
         }
     }
 
-    if (counts[CAP_CALL_WITH_REFERENCE_VOCAB] != 86 ||
-        counts[CAP_CALL_WITHOUT_REFERENCE_VOCAB] != 25 || counts[CAP_NO_CALL] != 50 ||
+    if (counts[CAP_CALL_WITH_REFERENCE_VOCAB] != 87 ||
+        counts[CAP_CALL_WITHOUT_REFERENCE_VOCAB] != 25 || counts[CAP_NO_CALL] != 78 ||
         counts[CAP_TRANSFORM_ONLY] != 1 || counts[CAP_UNSUPPORTED] != 1) {
         fprintf(stderr,
                 "  [language-registry] invariant=capability_partition call_ref_vocab=%d ref_gap=%d "
@@ -316,9 +344,9 @@ TEST(repro_language_capability_ledger_covers_every_enum) {
 TEST(repro_call_argument_matrices_equal_call_capability_ledger) {
     enum {
         EXPECTED_MATRIX_A_ROWS = 67,
-        EXPECTED_MATRIX_B_ROWS = 46,
-        EXPECTED_CALL_CAPABLE_LANGUAGES = 111,
-        EXPECTED_NON_CALL_LANGUAGES = 52,
+        EXPECTED_MATRIX_B_ROWS = 47,
+        EXPECTED_CALL_CAPABLE_LANGUAGES = 112,
+        EXPECTED_NON_CALL_LANGUAGES = 80,
         EXPECTED_NON_CALL_DOMAIN_CONTROLS = 2,
     };
     CBMLanguage matrix_a_ids[CBM_LANG_COUNT];
@@ -408,7 +436,6 @@ TEST(repro_call_argument_matrices_equal_call_capability_ledger) {
         }
 
         if (call_capable) {
-            call_capable_languages++;
             if (total_count == 0) {
                 fprintf(stderr,
                         "  [language-registry] lang=%s id=%d "
@@ -416,6 +443,7 @@ TEST(repro_call_argument_matrices_equal_call_capability_ledger) {
                         language_name, language_id);
                 failures++;
             } else {
+                call_capable_languages++;
                 covered_call_capable_languages++;
                 if (total_count != 1) {
                     fprintf(stderr,

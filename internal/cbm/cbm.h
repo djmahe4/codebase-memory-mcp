@@ -82,7 +82,6 @@ typedef enum {
     CBM_LANG_POWERSHELL,
     CBM_LANG_PASCAL,
     CBM_LANG_DLANG,
-    CBM_LANG_NIM,
     CBM_LANG_SCHEME,
     CBM_LANG_FENNEL,
     CBM_LANG_FISH,
@@ -174,6 +173,35 @@ typedef enum {
     CBM_LANG_OBJECTSCRIPT_UDL,     // InterSystems ObjectScript UDL (.cls class files)
     CBM_LANG_OBJECTSCRIPT_ROUTINE, // InterSystems ObjectScript routine (.mac/.int/.rtn/.inc)
     CBM_LANG_OBJECTSCRIPT_EXPORT,  // InterSystems Studio Export XML (<Export generator="Cache">)
+    CBM_LANG_ARDUINO,              // Arduino C++ (.ino)
+    CBM_LANG_AUTHZED,              // Authzed SpiceDB schema (.zed)
+    CBM_LANG_BP,                   // Android Blueprint (.bp)
+    CBM_LANG_BPFTRACE,             // eBPF tracing script (.bt)
+    CBM_LANG_CHATITO,              // Chatito NLP dataset DSL (.chatito)
+    CBM_LANG_CORN,                 // Corn configuration language (.corn)
+    CBM_LANG_CPON,                 // CPON data format (.cpon)
+    CBM_LANG_CUE,                  // CUE configuration language (.cue)
+    CBM_LANG_CYLC,                 // Cylc workflow engine suite config (.cylc)
+    CBM_LANG_DHALL,                // Dhall configuration language (.dhall)
+    CBM_LANG_GODOT_RESOURCE,       // Godot Text Resource (.tscn, .tres)
+    CBM_LANG_FACILITY,             // Facility Service Definition (.fsd)
+    CBM_LANG_FAUST,                // Faust DSP audio language (.dsp)
+    CBM_LANG_GHERKIN,              // Gherkin BDD specifications (.feature)
+    CBM_LANG_C3,                   // C3 (.c3, .c3i)
+    CBM_LANG_CIRCOM,               // Circom zero-knowledge circuit language (.circom)
+    CBM_LANG_COOKLANG,             // Cooklang recipe markup (.cook)
+    CBM_LANG_HAXE,                 // Haxe (.hx)
+    CBM_LANG_NIM,                  // Nim (.nim, .nims, .nimble)
+    CBM_LANG_PROMELA,              // Promela verification language (.pml, .promela)
+    CBM_LANG_REASON,               // ReasonML (.re, .rei)
+    CBM_LANG_SLINT,                // Slint UI markup (.slint)
+    CBM_LANG_UNISON,               // Unison (.u)
+    CBM_LANG_VALA,                 // Vala (.vala, .vapi)
+    CBM_LANG_WREN,                 // Wren (.wren)
+    CBM_LANG_XQUERY,               // XQuery (.xq, .xql, .xqm, .xquery)
+    CBM_LANG_YANG,                 // YANG data modeling language (.yang)
+    CBM_LANG_YUL,                  // Yul smart contract intermediate language (.yul)
+    CBM_LANG_CEDAR,                // Cedar policy language (.cedar)
     CBM_LANG_COUNT
 } CBMLanguage;
 
