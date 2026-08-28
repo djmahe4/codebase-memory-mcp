@@ -200,6 +200,16 @@ extern const TSLanguage *tree_sitter_xquery(void);
 extern const TSLanguage *tree_sitter_yang(void);
 extern const TSLanguage *tree_sitter_yul(void);
 extern const TSLanguage *tree_sitter_cedar(void);
+extern const TSLanguage *tree_sitter_abnf(void);
+extern const TSLanguage *tree_sitter_motoko(void);
+extern const TSLanguage *tree_sitter_moonbit(void);
+extern const TSLanguage *tree_sitter_wdl(void);
+extern const TSLanguage *tree_sitter_rego(void);
+extern const TSLanguage *tree_sitter_plantuml(void);
+extern const TSLanguage *tree_sitter_bass(void);
+extern const TSLanguage *tree_sitter_elsa(void);
+extern const TSLanguage *tree_sitter_elvish(void);
+extern const TSLanguage *tree_sitter_fidl(void);
 
 // -- Empty sentinel --
 static const char *empty_types[] = {NULL};
@@ -2846,6 +2856,66 @@ static const CBMLangSpec lang_specs[CBM_LANG_COUNT] = {
                         empty_types, empty_types, empty_types, empty_types,
                         empty_types, empty_types, empty_types, empty_types,
                         NULL, empty_types, NULL, NULL, tree_sitter_cedar, NULL},
+
+    // CBM_LANG_ABNF (ABNF)
+    [CBM_LANG_ABNF] = {CBM_LANG_ABNF, empty_types, empty_types, empty_types,
+                       empty_types, empty_types, empty_types, empty_types,
+                       empty_types, empty_types, empty_types, empty_types,
+                       NULL, empty_types, NULL, NULL, tree_sitter_abnf, NULL},
+
+    // CBM_LANG_MOTOKO (Motoko)
+    [CBM_LANG_MOTOKO] = {CBM_LANG_MOTOKO, empty_types, empty_types, empty_types,
+                         empty_types, empty_types, empty_types, empty_types,
+                         empty_types, empty_types, empty_types, empty_types,
+                         NULL, empty_types, NULL, NULL, tree_sitter_motoko, NULL},
+
+    // CBM_LANG_MOONBIT (MoonBit)
+    [CBM_LANG_MOONBIT] = {CBM_LANG_MOONBIT, empty_types, empty_types, empty_types,
+                          empty_types, empty_types, empty_types, empty_types,
+                          empty_types, empty_types, empty_types, empty_types,
+                          NULL, empty_types, NULL, NULL, tree_sitter_moonbit, NULL},
+
+    // CBM_LANG_WDL (WDL)
+    [CBM_LANG_WDL] = {CBM_LANG_WDL, empty_types, empty_types, empty_types,
+                      empty_types, empty_types, empty_types, empty_types,
+                      empty_types, empty_types, empty_types, empty_types,
+                      NULL, empty_types, NULL, NULL, tree_sitter_wdl, NULL},
+
+    // CBM_LANG_REGO (Rego)
+    [CBM_LANG_REGO] = {CBM_LANG_REGO, empty_types, empty_types, empty_types,
+                       empty_types, empty_types, empty_types, empty_types,
+                       empty_types, empty_types, empty_types, empty_types,
+                       NULL, empty_types, NULL, NULL, tree_sitter_rego, NULL},
+
+    // CBM_LANG_PLANTUML (PlantUML)
+    [CBM_LANG_PLANTUML] = {CBM_LANG_PLANTUML, empty_types, empty_types, empty_types,
+                           empty_types, empty_types, empty_types, empty_types,
+                           empty_types, empty_types, empty_types, empty_types,
+                           NULL, empty_types, NULL, NULL, tree_sitter_plantuml, NULL},
+
+    // CBM_LANG_BASS (Bass)
+    [CBM_LANG_BASS] = {CBM_LANG_BASS, empty_types, empty_types, empty_types,
+                       empty_types, empty_types, empty_types, empty_types,
+                       empty_types, empty_types, empty_types, empty_types,
+                       NULL, empty_types, NULL, NULL, tree_sitter_bass, NULL},
+
+    // CBM_LANG_ELSA (Elsa)
+    [CBM_LANG_ELSA] = {CBM_LANG_ELSA, empty_types, empty_types, empty_types,
+                       empty_types, empty_types, empty_types, empty_types,
+                       empty_types, empty_types, empty_types, empty_types,
+                       NULL, empty_types, NULL, NULL, tree_sitter_elsa, NULL},
+
+    // CBM_LANG_ELVISH (Elvish)
+    [CBM_LANG_ELVISH] = {CBM_LANG_ELVISH, empty_types, empty_types, empty_types,
+                         empty_types, empty_types, empty_types, empty_types,
+                         empty_types, empty_types, empty_types, empty_types,
+                         NULL, empty_types, NULL, NULL, tree_sitter_elvish, NULL},
+
+    // CBM_LANG_FIDL (FIDL)
+    [CBM_LANG_FIDL] = {CBM_LANG_FIDL, empty_types, empty_types, empty_types,
+                       empty_types, empty_types, empty_types, empty_types,
+                       empty_types, empty_types, empty_types, empty_types,
+                       NULL, empty_types, NULL, NULL, tree_sitter_fidl, NULL},
 
 };
 

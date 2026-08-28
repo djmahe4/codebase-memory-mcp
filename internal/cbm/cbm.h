@@ -202,6 +202,16 @@ typedef enum {
     CBM_LANG_YANG,                 // YANG data modeling language (.yang)
     CBM_LANG_YUL,                  // Yul smart contract intermediate language (.yul)
     CBM_LANG_CEDAR,                // Cedar policy language (.cedar)
+    CBM_LANG_ABNF,                 // ABNF grammar specification (.abnf)
+    CBM_LANG_MOTOKO,               // Motoko smart contract language (.mo)
+    CBM_LANG_MOONBIT,              // MoonBit WebAssembly language (.mbt)
+    CBM_LANG_WDL,                  // Workflow Description Language (.wdl)
+    CBM_LANG_REGO,                 // Rego Open Policy Agent policy language (.rego)
+    CBM_LANG_PLANTUML,             // PlantUML diagram language (.puml, .plantuml, .iuml)
+    CBM_LANG_BASS,                 // Bass scripting language (.bass)
+    CBM_LANG_ELSA,                 // Elsa lambda calculus evaluator (.elsa)
+    CBM_LANG_ELVISH,               // Elvish shell (.elv)
+    CBM_LANG_FIDL,                 // Fuchsia Interface Definition Language (.fidl)
     CBM_LANG_COUNT
 } CBMLanguage;
 

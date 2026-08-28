@@ -1,0 +1,2 @@
+library sample;
+protocol Echo { EchoString(struct { value string; }) -> (struct { response string; }); };

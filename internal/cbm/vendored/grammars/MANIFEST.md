@@ -9,7 +9,7 @@ The grammars were originally vendored as bare `parser.c`+`scanner.c` with **no r
 
 ## Summary
 
-- Grammars: **188** — vendored-from-upstream: **171**, first-party/self-maintained: **12**, registry-disagreement: **5** (159 original + 14 Batch A + 15 Batch B)
+- Grammars: **198** — vendored-from-upstream: **181**, first-party/self-maintained: **12**, registry-disagreement: **5** (159 original + 14 Batch A + 15 Batch B + 10 Batch C)
 - ABI distribution: **7×** ABI-13 **85×** ABI-14 **64×** ABI-15 (runtime ceiling is ABI 15; never vendor ABI 16 without a runtime upgrade)
 - Vendored copies missing LICENSE: **0** — all upstream LICENSE files restored 2026-06-11 (first-party grammars carry the project MIT license; `move` uses the Helix-listed upstream tzakian/tree-sitter-move MIT text, `zsh` uses georgeharker/tree-sitter-zsh MIT)
 - `verdict`: VERIFIED-BOTH = our source matches *both* registries; VERIFIED-NVIM/HELIX = matches one; registry-disagreement = registries name a different repo (listed separately); `vendor-maintained` = the language vendor's own grammar, not in nvim/Helix.
@@ -241,6 +241,16 @@ Re-vendoring from upstream must re-apply these.
 | yang | 13 | Hubro/tree-sitter-yang | `main` | VERIFIED-NVIM | ✅ |
 | yul | 15 | tree-sitter-grammars/tree-sitter-yul | `main` | VERIFIED-NVIM | ✅ |
 | cedar | 14 | cedar-policy/tree-sitter-cedar | `main` | VERIFIED-NVIM | ✅ |
+| abnf | 9 | jmitchell/tree-sitter-abnf | `f68bb6e3cfcc` | VERIFIED-NVIM | ✅ |
+| motoko | 14 | polychromatist/tree-sitter-motoko | `a172fd1ddc09` | VERIFIED-NVIM | ✅ |
+| moonbit | 15 | moonbitlang/tree-sitter-moonbit | `5435c307c6cf` | VERIFIED-NVIM | ✅ |
+| wdl | 14 | broadinstitute/tree-sitter-wdl | `e0ea84c0a38f` | VERIFIED-NVIM | ✅ |
+| rego | 15 | FallenAngel97/tree-sitter-rego | `da2a1f63cd87` | VERIFIED-BOTH | ✅ |
+| plantuml | 13 | lyndsysimon/tree-sitter-plantuml | `fe25cf8592ea` | VERIFIED-NVIM | ✅ |
+| bass | 14 | vito/tree-sitter-bass | `28dc7059722b` | VERIFIED-BOTH | ✅ |
+| elsa | 14 | glapa-grossklag/tree-sitter-elsa | `0a66b2b3f3c1` | VERIFIED-NVIM | ✅ |
+| elvish | 14 | elves/tree-sitter-elvish | `5e7210d94542` | VERIFIED-NVIM | ✅ |
+| fidl | 14 | google/tree-sitter-fidl | `0a8910f29326` | VERIFIED-NVIM | ✅ |
 
 ## First-party / self-maintained
 

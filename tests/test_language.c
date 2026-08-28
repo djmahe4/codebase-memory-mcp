@@ -1193,6 +1193,58 @@ TEST(lang_ext_cedar) {
     PASS();
 }
 
+TEST(lang_ext_abnf) {
+    ASSERT_EQ(cbm_language_for_extension(".abnf"), CBM_LANG_ABNF);
+    PASS();
+}
+
+TEST(lang_ext_motoko) {
+    ASSERT_EQ(cbm_language_for_extension(".mo"), CBM_LANG_MOTOKO);
+    PASS();
+}
+
+TEST(lang_ext_moonbit) {
+    ASSERT_EQ(cbm_language_for_extension(".mbt"), CBM_LANG_MOONBIT);
+    PASS();
+}
+
+TEST(lang_ext_wdl) {
+    ASSERT_EQ(cbm_language_for_extension(".wdl"), CBM_LANG_WDL);
+    PASS();
+}
+
+TEST(lang_ext_rego) {
+    ASSERT_EQ(cbm_language_for_extension(".rego"), CBM_LANG_REGO);
+    PASS();
+}
+
+TEST(lang_ext_plantuml) {
+    ASSERT_EQ(cbm_language_for_extension(".puml"), CBM_LANG_PLANTUML);
+    ASSERT_EQ(cbm_language_for_extension(".plantuml"), CBM_LANG_PLANTUML);
+    ASSERT_EQ(cbm_language_for_extension(".iuml"), CBM_LANG_PLANTUML);
+    PASS();
+}
+
+TEST(lang_ext_bass) {
+    ASSERT_EQ(cbm_language_for_extension(".bass"), CBM_LANG_BASS);
+    PASS();
+}
+
+TEST(lang_ext_elsa) {
+    ASSERT_EQ(cbm_language_for_extension(".elsa"), CBM_LANG_ELSA);
+    PASS();
+}
+
+TEST(lang_ext_elvish) {
+    ASSERT_EQ(cbm_language_for_extension(".elv"), CBM_LANG_ELVISH);
+    PASS();
+}
+
+TEST(lang_ext_fidl) {
+    ASSERT_EQ(cbm_language_for_extension(".fidl"), CBM_LANG_FIDL);
+    PASS();
+}
+
 /* --- Ported from lang_test.go: TestForLanguage --- */
 TEST(lang_all_have_names) {
     /* Every language enum value from 0 to CBM_LANG_COUNT-1
@@ -1470,6 +1522,16 @@ SUITE(language) {
     RUN_TEST(lang_ext_yang);
     RUN_TEST(lang_ext_yul);
     RUN_TEST(lang_ext_cedar);
+    RUN_TEST(lang_ext_abnf);
+    RUN_TEST(lang_ext_motoko);
+    RUN_TEST(lang_ext_moonbit);
+    RUN_TEST(lang_ext_wdl);
+    RUN_TEST(lang_ext_rego);
+    RUN_TEST(lang_ext_plantuml);
+    RUN_TEST(lang_ext_bass);
+    RUN_TEST(lang_ext_elsa);
+    RUN_TEST(lang_ext_elvish);
+    RUN_TEST(lang_ext_fidl);
 
     RUN_TEST(lang_all_have_names);
 }
